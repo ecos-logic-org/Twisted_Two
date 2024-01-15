@@ -23,6 +23,8 @@ formats/zstd/compression_level=1
 
 window/size/viewport_width=2340
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [dotnet]
 
@@ -48,6 +50,7 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 textures/default_filters/use_nearest_mipmap_filter=true
 textures/default_filters/anisotropic_filtering_level=4
 2d/sdf/oversize=0

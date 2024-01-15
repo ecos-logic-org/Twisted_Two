@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drm3tn5knrun3"
-path="res://.godot/imported/icons8-back-arrow-50.png-7ade8201430111303dbb35bc2f0f2560.ctex"
+uid="uid://b5h5m5jq88l7y"
+path="res://.godot/imported/T_P5_Triangle_Alt.png-1ee121c25bd0954fd58234cd151d031b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/icons8-back-arrow-50.png"
-dest_files=["res://.godot/imported/icons8-back-arrow-50.png-7ade8201430111303dbb35bc2f0f2560.ctex"]
+source_file="res://Resources/Directions/T_P5_Triangle_Alt.png"
+dest_files=["res://.godot/imported/T_P5_Triangle_Alt.png-1ee121c25bd0954fd58234cd151d031b.ctex"]
 
 [params]
 

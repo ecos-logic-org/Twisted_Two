@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl30r252lpmqk"]
+[gd_scene load_steps=11 format=3 uid="uid://bl30r252lpmqk"]
 
 [ext_resource type="Texture2D" uid="uid://cschex7t0dujn" path="res://Resources/synthwave-preview-big.png" id="1_juisc"]
 [ext_resource type="Texture2D" uid="uid://k77g7u7eqxec" path="res://Screenhud1.png" id="2_rpnrf"]
 [ext_resource type="PackedScene" uid="uid://ddervq28wccmi" path="res://Scenes/tohu.tscn" id="3_ddk54"]
-[ext_resource type="Texture2D" uid="uid://drm3tn5knrun3" path="res://Resources/icons8-back-arrow-50.png" id="4_6d7id"]
-[ext_resource type="Texture2D" uid="uid://w662bo5rw5kl" path="res://Resources/frenzh.webp" id="4_yia0v"]
+[ext_resource type="Texture2D" uid="uid://b5h5m5jq88l7y" path="res://Resources/Directions/T_P5_Triangle_Alt.png" id="4_plpyx"]
+[ext_resource type="Texture2D" uid="uid://c605fm7hsbi6o" path="res://Resources/Directions/T_P5_Triangle_Color_Alt.png" id="5_g3qns"]
+[ext_resource type="Texture2D" uid="uid://w37sdgdkdoxk" path="res://Resources/Healthbar_Below.png" id="6_hbrgf"]
+[ext_resource type="Texture2D" uid="uid://cpum2s30t8msm" path="res://Resources/Healthbar_Above.png" id="7_4acep"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_507wq"]
 script/source = "using Godot;
@@ -64,9 +66,10 @@ shape = SubResource("RectangleShape2D_uh02v")
 one_way_collision = true
 
 [node name="Synthwave-preview-big" type="Sprite2D" parent="."]
-position = Vector2(598.5, 141.5)
+position = Vector2(554, -1237)
 scale = Vector2(3.27639, 2.61875)
 texture = ExtResource("1_juisc")
+offset = Vector2(13.582, 526.396)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(589, 222)
@@ -79,20 +82,30 @@ scale = Vector2(5.30172, 2.8)
 texture = ExtResource("2_rpnrf")
 
 [node name="Tohu" parent="." instance=ExtResource("3_ddk54")]
-position = Vector2(912, 145)
+position = Vector2(1070, 192)
 scale = Vector2(2, 2)
 
+[node name="Backward" type="TouchScreenButton" parent="."]
+position = Vector2(-602, 705)
+rotation = -1.5708
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("4_plpyx")
+texture_pressed = ExtResource("5_g3qns")
+action = "ui_left"
+
 [node name="Forward" type="TouchScreenButton" parent="."]
-position = Vector2(-63, 704)
-rotation = 3.14159
-scale = Vector2(2.44974, 2.61093)
-texture_normal = ExtResource("4_6d7id")
-texture_pressed = ExtResource("4_yia0v")
+position = Vector2(2.99998, 380)
+rotation = 1.5708
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("4_plpyx")
+texture_pressed = ExtResource("5_g3qns")
 action = "ui_right"
 
-[node name="Backward" type="TouchScreenButton" parent="Forward"]
-position = Vector2(207.936, 100)
-rotation = 3.14159
-scale = Vector2(0.939175, 0.991165)
-texture_normal = ExtResource("4_6d7id")
-action = "ui_left"
+[node name="FutureHealthbar" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = -145.0
+offset_top = -156.0
+offset_right = 29.0
+offset_bottom = -130.0
+texture_under = ExtResource("6_hbrgf")
+texture_over = ExtResource("7_4acep")

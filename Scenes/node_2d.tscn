@@ -86,7 +86,7 @@ position = Vector2(1070, 192)
 scale = Vector2(2, 2)
 
 [node name="Backward" type="TouchScreenButton" parent="."]
-position = Vector2(-602, 705)
+position = Vector2(-587, 577)
 rotation = -1.5708
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("4_plpyx")
@@ -94,7 +94,7 @@ texture_pressed = ExtResource("5_g3qns")
 action = "ui_left"
 
 [node name="Forward" type="TouchScreenButton" parent="."]
-position = Vector2(2.99998, 380)
+position = Vector2(-9.00002, 376)
 rotation = 1.5708
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("4_plpyx")

@@ -9,17 +9,17 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
-	public Label thisLabel = GetNode("NormalLabel") as Label;
+	
 
 
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
-
-
-		if (Input.GetActionStrength("Light") != 0)
+		
+		
+		if (Input.GetActionStrength("light") != 0)
 		{
-			this.thisLabel.setText("Light pressed");
+			GetNode<Label>("NormalLabel").Text += "Light presed";
 		}
 		// Add the gravity.
 		if (!IsOnFloor())

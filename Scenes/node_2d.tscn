@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bl30r252lpmqk"]
+[gd_scene load_steps=14 format=3 uid="uid://bl30r252lpmqk"]
 
 [ext_resource type="Texture2D" uid="uid://cschex7t0dujn" path="res://Resources/synthwave-preview-big.png" id="1_juisc"]
 [ext_resource type="Texture2D" uid="uid://k77g7u7eqxec" path="res://Screenhud1.png" id="2_rpnrf"]
@@ -32,6 +32,10 @@ public partial class node_2d : Node2D
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh02v"]
 size = Vector2(1445.86, 29.5502)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pqp3c"]
+font_size = 38
+font_color = Color(0.937255, 0.407843, 0.819608, 1)
 
 [node name="FirstMap" type="Node2D"]
 position = Vector2(584, 312)
@@ -99,24 +103,25 @@ texture_normal = ExtResource("4_plpyx")
 texture_pressed = ExtResource("5_g3qns")
 action = "ui_right"
 
+[node name="NormalLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.432
+anchor_top = -0.463
+offset_left = 1251.0
+offset_top = 246.0
+offset_right = 1443.41
+offset_bottom = 269.0
+text = "NORMAL:
+"
+label_settings = SubResource("LabelSettings_pqp3c")
+horizontal_alignment = 1
+
 [node name="LightTest" type="TouchScreenButton" parent="."]
 position = Vector2(1450, 359)
 scale = Vector2(0.958, 1)
 texture_normal = ExtResource("5_bg30q")
 texture_pressed = ExtResource("6_xqpej")
 action = "light"
-
-[node name="NormalLabel" type="Label" parent="LightTest"]
-anchors_preset = -1
-anchor_left = -0.432
-anchor_top = -0.463
-offset_left = -97.1325
-offset_top = 5.52801
-offset_right = 95.2755
-offset_bottom = 6.0
-text = "NORMAL:
-"
-horizontal_alignment = 1
 
 [node name="FutureHealthbar" type="TextureProgressBar" parent="."]
 visible = false
